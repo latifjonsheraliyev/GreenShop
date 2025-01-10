@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 10px;
+}
+@font-face {
+  font-family: "Cera Pro"; /* O'zingizning font nomingiz */
+  src: url("./fonts/Demo_Fonts/Fontspring-DEMO-cerapro-black.otf")
+    format("opentype");
+}
+.cera{
+  font-family: "Cera Pro";
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: green;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.menu-item.active::after {
+  width: 100%;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
